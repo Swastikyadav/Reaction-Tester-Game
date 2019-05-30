@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+<body>
+    <!--
+    <p id="text">Hello World!</p>
+    <button id="but">Change Text</button>
+    <p id="text2">JavaScript is ...</p>
+    <button id="but2">Append Text2</button>
+    <p id="notext"></p>
+    <button id="visibleText">Make text visible.</button>
+    <p id="moreText">This is some text.</p>
+    <button id="styleText">Style Text</button>
+    
+    <input type="text" name="" id="inputValue">
+    <button id="fetchFromInput">Change the text.</button>
+    <p id="text4">This is some text.</p>
+    
+    <p>How many fingers am I holding?</p>
+    <input type="text" name="" id="finger">
+    <br><br>
+    <button id="fingerButton">Enter</button>
+
+    <select name="" id="">
+        <option value="">0</option>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+    </select>
+    -->
+
+    <script type="text/javascript">
+    /*
+        //alert('Hi! Swastik');
+        // document tells the JS that we are looking for something in this document.
+        document.getElementById("but").onclick = function() {
+            document.getElementById("text").innerHTML = "Text Changed";
+        }
+        //concatenation (+) joining two texts.
+        //Append - Adding something at the end of something.
+        document.getElementById("but2").onclick = function() {
+            document.getElementById("text2").innerHTML = "I think " + document.getElementById("text2").innerHTML + "awesome.";
+        }
+        document.getElementById("visibleText").onclick = function() {
+            document.getElementById("notext").innerHTML = "<h1>Invisible Text!</h1>";
+            // Any html can be written at the place of Invisible Text.
+        }
+
+        // Changing styles with JS.
+        document.getElementById("styleText").onclick = function() {
+            document.getElementById("moreText").style = "color:red; font-size:30px; font-weight:bold;"
+        }
+    
+
+        var x = 5;
+        x = 20;
+        //alert(x);
+
+        var name = "Swastik"; // Quotes to let the browser know that it is a string.
+        //alert(name);
+
+        document.getElementById("fetchFromInput").onclick = function() {
+            var userInput = document.getElementById("inputValue").value;
+            document.getElementById("text4").innerHTML = userInput;
+        }
+    
+    //Arrays: Stores a number of diff values in an object.
+    // Arrays are just diff type of variable.
+
+    var myArray = new Array();
+    myArray[0] = "Pizza";
+    myArray[1] = "Chocolate";
+    //console.log(myArray); // Prints out to the console.
+    //console.log(myArray.length); // .length tells the number of item in the array.
+
+    var tweets = ["Good Morning", "I love coffee"]; // Another way of creating an Array.
+    //console.log(tweets[1]);
+    // push command adds a new item at the end of the Array.
+    tweets.push = "Back to work.";
+    console.log(tweets);
+    tweets.splice(1, 0, "Cornflask for breakfast"); // splice(start, nr of item) delete items. Also adds item in array, when used 3 arguments.
+    console.log(tweets);
+    tweets[2] = "I love cold coffee";
+    console.log(tweets);
+    
+    // If (conditional) statement.
+    var x = 2; // = (singal equalls) Assignment.
+    if (x == 1) { // == (Double equalls) comparison.
+        alert("X is 1");
+    } else {
+        alert("X is not 1");
+    }
+    
+    document.getElementById("fingerButton").onclick = function() {
+        var numFingers = Math.floor(Math.random()*5);
+        var fingersGuessed = document.getElementById("finger").value;
+        if (numFingers == fingersGuessed) {
+            alert("You got it!");
+        }
+        else {
+            alert("Nonpe! It was " + numFingers + " fingers.");
+        }
+    }
+
+    // Loops: Itereation. Repeatition.
+    // Run certain lines of code again and again.
+    // For loops.
+
+    var posts = ["Good Morning", "Lala land", "Never give up"];
+    for (var i = 0; i < posts.length; i++) // begins with 0; how many times to loop (i < 5); increase the value by 1 after every iteration.
+    {
+        document.write("<p>" + posts[i] +"</p>");
+    }
+
+    // While loop.
+    var i = 0;
+    while (i < 5) {
+        console.log(i);
+        i++
+    }
+    
+    // A good place to use while loop. Comp guesses the nr of fingers.
+    var fingerHold = 4;
+    while (fingerHold != compGuess) {
+       var compGuess = Math.floor(Math.random()*6);
+        if (fingerHold === compGuess) {
+            alert("comp got it!");
+        } else {
+            alert("Nope! comp, Try again.");
+        } 
+    }
+    */
+    </script>
+</body>
+</html> 

@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reaction Tester</title>
+    <style type="text/css">
+        * {
+            font-family: sans-serif;
+        }
+        #shape {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+            position: relative;
+        }
+        .bg_color {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Your Reaction.</h1>
+    <p>Click on the shape as fast as you can.</p>
+    <h3>Your Time: <span class="bg_color" id="timetaken"></span> Points: <span class="bg_color" id="points"></span></h3>
+    <h3>Time to beat (Your Best reaction time): <span class="bg_color" id="besttime"></span></h3>
+    <button id="start">Start</button>
+    <div id="shape"></div>
+
+    <script type="text/javascript">
+        var start = new Date().getTime();
+        function appear() {
+            var x = Math.random()*91;
+            var y = Math.random()*301;
+
+            var size = Math.floor(Math.random()*301) + 50;
+
+            var r = Math.floor(Math.random()*256);
+            var g = Math.floor(Math.random()*256);
+            var b = Math.floor(Math.random()*256);
+
+            var radius = Math.floor(Math.random()*2);
+
+            if (radius == 0) {
+                document.getElementById("shape").style.borderRadius = "50%";
+            } else {
+                document.getElementById("shape").style.borderRadius = "0";
+            }
+
+            document.getElementById("shape").style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+
+            document.getElementById("shape").style.width = size + "px";
+            document.getElementById("shape").style.height = size + "px";
+
+            document.getElementById("shape").style.top = y + "px";
+            document.getElementById("shape").style.left = x + "%";
+            document.getElementById("shape").style.display = "block";
+            start = new Date().getTime();
+        }
+        
+        function appearance_delay() {
+            setTimeout(appear, Math.random()*2000);
+        }
+        document.getElementById("start").onclick = function() {
+            appearance_delay();
+        }
+
+        var min = 4;
+        point = 0;
+
+        document.getElementById("shape").onclick = function() {
+            document.getElementById("shape").style.display = "none";
+            var end = new Date().getTime();
+            var timetaken = (end - start) / 1000;
+            document.getElementById("timetaken").innerHTML = timetaken + "s";
+            appearance_delay();
+            
+            if (timetaken < min) {
+                min = timetaken;
+                document.getElementById("besttime").innerHTML = min;
+            }
+
+            if (timetaken < 1.0) {
+                point = point + 1;
+            }
+            document.getElementById("points").innerHTML = point;
+        }
+    </script>
+</body>
+</html>
